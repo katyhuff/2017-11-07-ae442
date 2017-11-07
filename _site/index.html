@@ -111,45 +111,196 @@ development problems. (6) It is large. (7) It is heavy. (8) It is complicated.  
                     </section>
                         <section data-background-image="https://upload.wikimedia.org/wikipedia/commons/a/a0/PressurizedWaterReactor.gif" data-background-size="contain">
                         </section>
-                    <section data-background="http://docplayer.com.br/docs-images/57/40994436/images/112-0.png" 
-                            data-background-size="contain">
                     </section>
                         </section>
                         <section>
                             <section>
-                                    <h3>Space Reactors are Unique</h3>
-
+                                    <h3>Space Reactor Design Constraints</h3>
+                                    <ul>
+                                            <li>produce kW</li>
+                                            <li>limit mass</li>
+                                            <li>limit volume</li>
+                                            <li>no refuelling</li>
+                                            <li>protect electronics from neutrons</li>
+                                    </ul>
                             </section>
-
                             <section>
                                     <h3>Design</h3>
+                                            <img height="100%" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/SNAP_10A_Space_Nuclear_Power_Plant.jpg/220px-SNAP_10A_Space_Nuclear_Power_Plant.jpg" alt="Snap 10A"/>
+                            </section>
+                            <section>
+                                    <h3>Design</h3>
+                                            <img height="100%" src="http://etec.energy.gov/Operations/Major_Operations/MajorOpsImages/SNAP_10A_Reactor.jpg" alt="SNAP 10A"/>
 
                             </section>
                             <section>
-                                    <h3>Fuel</h3>
-
+                                    <h3>Space Reactors</h3> 
+                                            <img height="100%" 
+                                            src="./space-reactors.png" 
+                                            alt="space reactor specs."/>
                             </section>
                             <section>
-                                    <h3>Coolant</h3>
-
+                                    <h3>Space Reactor Fuel</h3> 
+                                            <img width="100%" 
+                                            src="./space-reactors-fuel.png" 
+                                            alt="space reactor fuel specs."/>
+                                    <ul>
+                                            <li>produce kW</li>
+                                            <li>limit mass</li>
+                                            <li>limit volume</li>
+                                            <li>no refuelling</li>
+                                    </ul>
                             </section>
                             <section>
-                                    <h3>Reflector</h3>
-
+                                    <h3>Space Reactor Coolant, Moderator, Reflector</h3> 
+                                            <img width="100%" 
+                                            src="./space-reactors-spectrum.png" 
+                                            alt="space reactor spectrum."/>
+                                    <ul>
+                                            <li>limit mass</li>
+                                            <li>limit volume</li>
+                                            <li>no refuelling</li>
+                                            <li>protect electronics from neutrons</li>
+                                    </ul>
                             </section>
                             <section>
-                                    <h3>Spectrum</h3>
-
+                                    <h3>Space Reactor Size</h3> 
+                                            <img height="100%" 
+                                            src="./space-reactors-size.png" 
+                                            alt="space reactor size specs."/>
+                                    <ul>
+                                            <li>limit mass</li>
+                                            <li>limit volume</li>
+                                            <li>no refuelling</li>
+                                    </ul>
                             </section>
                         </section>
+<section>
+<section>
+        <h3>How Much Fuel?</h3>
+First, let's think about the mass of fuel question. I could state without proof 
+that thermal \(^{235}U\) fissions consume about 1.23g per MWd. 
+But, let's prove it.
+<p>
+First, what is fission :
+</p>
+<p>
+\[
+\begin{align}
+^{235}_{92}U + ^{1}_{0}n \rightarrow \left(^{236}_{92}U\right)^* \rightarrow ^{A_1}_{Z_1}X +  ^{A_2}_{Z_2}X + {\nu ^{1}_{0}n} + Q
+\end{align}
+\]
+</p>
+<p>
+That's our fission reaction. For each fission, 200MeV of energy is released. 
+</p>
+</section>
+<section>
+<small>
+<p>
+Let's then calculate how many atoms result in a thermal power of one Joule (1 
+\(W\cdot s\)).
+</p>
+<p>
+\[
+\begin{align}
+\left(\frac{1\mbox{ fission}}{200 MeV}\right)
+\left(\frac{1MeV}{1.6021\times10^{-13}J}\right) 
+& =3.12\times 10^{10}
+\left(\frac{fissions}{J}\right)
+\end{align}
+\]
+</p>
+</small>
+</section>
 
-                                        <section>
-                                                <iframe src="https://energy.gov/articles/history-nuclear-power-space" frameBorder="0" width="100%"
-                                                height="600" marginwidth="0"
-                                                marginheight="0" scrolling="yes" style="border:0px; margin-bottom:5px; max-width: 100%;"
-                                                allowfullscreen> </iframe>
-                                        </section>
-                        </section>
+<section>
+<small>
+        <p> Each fission is one uranium atom, so: </p>
+\[\begin{align}
+\left(\frac{3.12\times 10^{10}\mbox{atoms fissioned}}{J}\right)
+\left(235 \frac{g}{ mol}\right)\left(\frac{1 mol}{6.022\times10^{23} atoms}\right)& = 1.22\times 10^{-11}\frac{g}{J}\\
+\end{align}
+\]
+</small>
+</section>
+
+<section>
+<small>
+        <p>
+We need to convert to MWd, so we'll need to know how many joules are in a MWd. 
+        </p>
+
+\[
+\begin{align}
+\left(\frac{1 J}{W\cdot s}\right)
+\left(\frac{10^6 W}{MW}\right)
+\left(\frac{60\times60 s}{h}\right)
+\left(\frac{24h}{d}\right)
+&=
+8.64\times10^{10}\frac{J}{MWd}
+\end{align}
+\]
+
+</small>
+</section>
+
+<section>
+<small>
+Then, we can multiply J/MWd against g/J to get g/MWd. 
+\[
+\begin{align}
+\left(8.64\times10^{10}\frac{J}{MWd}\right)\left(1.22\times 10^{-11}\frac{g}{J}\right)&= 1.05 \frac{g}{MWd}
+\end{align}
+\]
+</small>
+</section>
+
+<section>
+<small>
+<p>
+However, we have to correct for the fact that fuel is also consumed by non-fission capture.
+</p>
+\[
+\begin{align}
+\frac{\sigma_c}{\sigma_f} &= 0.169\\
+\Rightarrow\frac{\sigma_f + \sigma_c}{\sigma_f} &= 1.169\\
+\end{align}
+\]
+</small>
+</section>
+
+<section>
+<p>
+<small>
+So, we get:
+</p>
+\[
+\begin{align}
+\left(\frac{g}{MWd}\right)\left(\frac{\sigma_f + \sigma_c}{\sigma_f}\right)
+&= 1.05 \frac{g}{MWd}\times  1.169 = 1.23 \frac{g}{MWd}
+\end{align}
+\]
+</small>
+</section>
+
+<section>
+        <ul>
+                <li>If your fuel is 90% enriched, that means it's 90% \(^{235}U\) and 
+                        approximately 10% \(^{238}U\).</li>
+                <li>Don't forget to include the other elements in the fuel (if it's 
+                        \(UO_2\), some of fuel mass comes from oxygen).</li>
+                <li>You're probably going to need some coolant. 
+                        liquid metals are heavier than water, but allow a fast 
+                        spectrum, so you can breed and fission a tiny bit of 
+                        \(^{239}Pu\).</li>
+                <li>Finally, you're going to need reflectors (Be) to keep the 
+                        neutrons in the reactor (rather than washing all over your 
+                        craft electronics).<li>
+        </ul>
+</section>
+</section>
                         <section>
                                         <section>
                                                 <iframe src="https://xkcd.com/1162/" frameBorder="0" width="100%"
@@ -174,7 +325,7 @@ development problems. (6) It is large. (7) It is heavy. (8) It is complicated.  
                                 <section>
                                         <section>
 					    <h1>THE END</h1>
-					    <a href="https://katyhuff.github.io/2017-10-31-olin">katyhuff.github.io/2017-10-31-olin</a>
+					    <a href="https://katyhuff.github.io/2017-11-07-ae442">katyhuff.github.io/2017-11-07-ae442</a>
 					    <br/>
                                             <small>
 					    <a rel="license" 
@@ -184,7 +335,7 @@ development problems. (6) It is large. (7) It is heavy. (8) It is complicated.  
                                             src="https://i.creativecommons.org/l/by/4.0/88x31.png" 
                                     /></a><br /><span 
                                     xmlns:dct="http://purl.org/dc/terms/" 
-                            property="dct:title">Space Reactors</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://katyhuff.github.io" property="cc:attributionName" rel="cc:attributionURL">Kathryn Huff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://katyhuff.github.io/2017-10-31-olin" rel="dct:source">http://katyhuff.github.io/2017-10-31-olin</a>.
+                            property="dct:title">Space Reactors</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://katyhuff.github.io" property="cc:attributionName" rel="cc:attributionURL">Kathryn Huff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.<br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="http://katyhuff.github.io/2017-11-07-ae442" rel="dct:source">http://katyhuff.github.io/2017-11-07-ae442</a>.
                                             </small>
 					</section>
 				</section>
